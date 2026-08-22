@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UstaMontaj | Hızlı ve Güvenilir Mobilya Kurulumu</title>
+    <style>
+        :root {
+            --primary: #1e293b;
+            --accent: #f97316;
+            --bg-light: #f8fafc;
+            --text: #334155;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--white);
+        }
+
+        .logo span { color: var(--accent); }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-weight: 500;
+        }
+
+        .btn-header {
+            background: var(--accent);
+            color: var(--white);
+            padding: 0.5rem 1.2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(rgba(30, 41, 59, 0.85), rgba(30, 41, 59, 0.85)), 
+                        url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=80') center/cover;
+            color: var(--white);
+            padding: 5rem 5%;
+            text-align: center;
+        }
+
+        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9; }
+
+        /* Services */
+        .container { padding: 4rem 5%; max-width: 1200px; margin: 0 auto; }
+        .section-title { text-align: center; margin-bottom: 3rem; font-size: 2rem; color: var(--primary); }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .card:hover { transform: translateY(-5px); }
+        .card-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+        .card h3 { margin-bottom: 0.5rem; color: var(--primary); }
+
+        /* Calculator Widget */
+        .calculator {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; }
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        .price-box {
+            background: #fff7ed;
+            border: 2px dashed var(--accent);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+
+        .price-amount { font-size: 2rem; font-weight: bold; color: var(--accent); }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25d366;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            z-index: 1000;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem 5%;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">Usta<span>Montaj</span></div>
+        <nav>
+            <a href="#hizmetler">Hizmetler</a>
+            <a href="#hesaplayici">Fiyat Hesapla</a>
+            <a href="#iletisim" class="btn-header">Hızlı Randevu</a>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Mobilyalarınızı Güvenle ve Hızla Kuruyoruz</h1>
+        <p>IKEA, Koçtaş, Vivense ve tüm markalar için profesyonel montaj hizmeti.</p>
+        <a href="#hesaplayici" class="btn-header" style="padding: 1rem 2rem; font-size: 1.1rem;">Anında Fiyat Hesaptla</a>
+    </section>
+
+    <!-- Services -->
+    <div class="container" id="hizmetler">
+        <h2 class="section-title">Montaj Hizmetlerimiz</h2>
+        <div class="services-grid">
+            <div class="card">
+                <div class="card-icon">🛏️</div>
+                <h3>Yatak Odası</h3>
+                <p>Gardırop, sürgülü dolap, baza, karyola ve şifonyer kurulumu.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🛋️</div>
+                <h3>Salon & Yaşam</h3>
+                <p>TV ünitesi, konsol, vitrin, kitaplık ve koltuk takımı montajı.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">💼</div>
+                <h3>Ofis Mobilyaları</h3>
+                <p>Çalışma masası, toplantı masası, keson ve büro koltukları.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🔩</div>
+                <h3>Duvar Sabitleme</h3>
+                <p>Deprem ve çocuk güvenliği için ağır mobilyaların duvara sabitlenmesi.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interactive Price Calculator -->
+    <div class="container" id="hesaplayici">
+        <h2 class="section-title">Tahmini Fiyat Hesaplayıcı</h2>
+        <div class="calculator">
+            <div class="form-group">
+                <label for="category">Mobilya Türü</label>
+                <select id="category" onchange="calculatePrice()">
+                    <option value="0">Lütfen Seçin</option>
+                    <option value="600">Gardırop / Dolap</option>
+                    <option value="350">TV Ünitesi / Konsol</option>
+                    <option value="400">Yatak / Baza</option>
+                    <option value="250">Masa / Sandalye Seti</option>
+                    <option value="300">Kitaplık / Raflı Ünite</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="extra">Ek Hizmetler</label>
+                <select id="extra" onchange="calculatePrice()">
+                    <option value="0">Yok</option>
+                    <option value="150">Duvara Sabitleme Hizmeti (+150 TL)</option>
+                    <option value="200">Eski Mobilya Demontajı / Söküm (+200 TL)</option>
+                </select>
+            </div>
+
+            <div class="price-box">
+                <div>Tahmini Montaj Tutarı</div>
+                <div class="price-amount" id="total-price">0 TL</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/905000000000?text=Merhaba,%20mobilya%20montajı%20için%20fiyat%20almak%20istiyorum." class="whatsapp-float" target="_blank">
+        💬 WhatsApp'tan Fotoğraf Gönder & Fiyat Al
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 UstaMontaj - Tüm Hakları Saklıdır. Profesyonel Mobilya Kurulum Hizmetleri.</p>
+    </footer>
+
+    <!-- Simple Dynamic Script -->
+    <script>
+        function calculatePrice() {
+            const categoryPrice = parseInt(document.getElementById('category').value);
+            const extraPrice = parseInt(document.getElementById('extra').value);
+            
+            const total = categoryPrice + extraPrice;
+            document.getElementById('total-price').innerText = total + ' TL';
+        }
+    </script>
+</body>
+</html>
