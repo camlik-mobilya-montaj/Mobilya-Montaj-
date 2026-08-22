@@ -1,0 +1,20 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "ayarlar"
+    label: "Site Ayarları"
+    files:
+      - file: "content/site.json"
+        label: "İletişim ve Fiyat Bilgileri"
+        name: "site_ayarlari"
+        fields:
+          - { label: "Kendi Telefonunuz", name: "tel_kendi", widget: "string", default: "05320000000" }
+          - { label: "Usta/Babanızın Telefonu", name: "tel_usta", widget: "string", default: "05330000000" }
+          - { label: "Slogan / Alt Başlık", name: "slogan", widget: "string", default: "IKEA, Koçtaş ve tüm markaların montajı" }
+          - { label: "Gardırop Montaj Fiyatı (TL)", name: "fiyat_gardrop", widget: "number", default: 600 }
+          - { label: "TV Ünitesi Fiyatı (TL)", name: "fiyat_tv", widget: "number", default: 350 }
