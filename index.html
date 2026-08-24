@@ -24,7 +24,9 @@
         }
 
         body {
-            background-color: var(--bg-light);
+            /* Arka plana şık mobilya teknik çizim/proje deseni eklendi */
+            background: linear-gradient(rgba(248, 250, 252, 0.92), rgba(248, 250, 252, 0.92)), 
+                        url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=80') center/cover fixed;
             color: var(--text);
             line-height: 1.6;
         }
@@ -429,7 +431,7 @@
             <!-- USTA BUTONU -->
             <div class="dropdown-wrapper">
                 <button class="main-contact-btn" onclick="toggleDropdown('ustaMenu')">
-                    🛠️ Usta ile İletişim ▼
+                    🛠️ Usta ▼
                 </button>
                 <div id="ustaMenu" class="sub-buttons">
                     <a href="https://wa.me/905353480728?text=Merhaba,%20mobilya%20montaj%20için%20fiyat%20almak%20istiyorum" target="_blank" class="sub-btn whatsapp">
@@ -444,7 +446,7 @@
             <!-- DESTEK BUTONU -->
             <div class="dropdown-wrapper">
                 <button class="main-contact-btn" onclick="toggleDropdown('destekMenu')">
-                    📞 Destek Hattı ▼
+                    📞 Destek ▼
                 </button>
                 <div id="destekMenu" class="sub-buttons">
                     <a href="https://wa.me/905518345122?text=Merhaba,%20destek%20almak%20istiyorum" target="_blank" class="sub-btn whatsapp">
