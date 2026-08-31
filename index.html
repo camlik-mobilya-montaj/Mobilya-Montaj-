@@ -12,7 +12,6 @@
             --bg-light: #f8fafc;
             --text: #334155;
             --white: #ffffff;
-            --dark-green: #075e54;
             --light-green: #25d366;
         }
 
@@ -29,6 +28,7 @@
             line-height: 1.6;
         }
 
+        /* Header ve Navigasyon */
         header {
             background-color: var(--primary);
             color: var(--white);
@@ -53,10 +53,15 @@
             color: var(--accent);
         }
 
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
         nav a {
             color: var(--white);
             text-decoration: none;
-            margin-left: 1.5rem;
             font-size: 0.95rem;
             transition: color 0.3s;
         }
@@ -65,11 +70,27 @@
             color: var(--accent);
         }
 
+        /* Üç Çizgi Mobil Menü Butonu */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--white);
+            border-radius: 3px;
+        }
+
+        /* Hero Alanı (Şeffaf Usta Görseli Arka Planı ile) */
         .hero {
-            background: linear-gradient(rgba(30, 41, 59, 0.85), rgba(30, 41, 59, 0.85)), center/cover;
+            background: linear-gradient(rgba(30, 41, 59, 0.82), rgba(30, 41, 59, 0.82)), url('hero-bg.jpg') center/cover;
             color: var(--white);
             text-align: center;
-            padding: 5rem 1rem;
+            padding: 6rem 1rem;
         }
 
         .hero h1 {
@@ -125,6 +146,7 @@
             margin-bottom: 3rem;
         }
 
+        /* Hizmetler Grid */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -149,6 +171,21 @@
             color: var(--primary);
         }
 
+        /* Hakkımızda Bölümü (Ortalanmış ve Düzgün Hizalanmış) */
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            margin-top: 1rem;
+            color: #475569;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        /* Galeri Grid (Fotoğrafların Tam ve Düzgün Görünmesi İçin) */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -166,8 +203,9 @@
 
         .gallery-item img {
             width: 100%;
-            height: 220px;
+            height: 240px;
             object-fit: cover;
+            background-color: #f1f5f9;
             border-bottom: 3px solid var(--accent);
         }
 
@@ -183,10 +221,52 @@
             padding: 0 1rem;
         }
 
+        /* Fiyat Hesaplama Aracı Bölümü */
+        .calculator-box {
+            background: var(--white);
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .calc-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .calc-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .calc-group select, .calc-group input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .calc-result {
+            background: var(--bg-light);
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--accent);
+            margin-top: 1.5rem;
+        }
+
+        /* Yorumlar ve Puanlama Bölümü */
         .reviews-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
+            margin-bottom: 3rem;
         }
 
         .review-card {
@@ -194,16 +274,37 @@
             padding: 1.5rem;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            font-style: italic;
+        }
+
+        .review-card .stars {
+            color: #f59e0b;
+            margin-bottom: 0.5rem;
         }
 
         .review-card h4 {
             margin-top: 1rem;
-            font-style: normal;
             color: var(--primary);
             text-align: right;
+            font-size: 0.95rem;
         }
 
+        /* Yorum Ekleme Formu */
+        .add-review-box {
+            background: var(--white);
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .add-review-box h3 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+            text-align: center;
+        }
+
+        /* WhatsApp Sabit Buton */
         .whatsapp-float {
             position: fixed;
             bottom: 20px;
@@ -234,9 +335,28 @@
             margin-top: 2rem;
         }
 
+        /* Mobil Uyum & Üç Çizgi Menü Aktifleştirme */
         @media(max-width: 768px) {
             nav {
                 display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary);
+                padding: 1.5rem;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                text-align: center;
+            }
+            nav.active {
+                display: flex;
+            }
+            nav a {
+                margin: 0.5rem 0;
+            }
+            .menu-toggle {
+                display: flex;
             }
             .hero h1 {
                 font-size: 2rem;
@@ -246,23 +366,32 @@
 </head>
 <body>
 
+    <!-- Header / Navigasyon ve Üç Çizgi Menü -->
     <header>
         <a href="#" class="logo">Çamlık<span>Mobilya</span></a>
-        <nav>
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="nav-menu">
             <a href="#hizmetler">Hizmetler</a>
             <a href="#hakkimizda">Hakkımızda</a>
             <a href="#galeri">Galeri</a>
+            <a href="#hesapla">Fiyat Hesapla</a>
             <a href="#yorumlar">Yorumlar</a>
             <a href="admin/index.html" style="color: var(--accent); font-weight: bold;">Yönetim Paneli</a>
         </nav>
     </header>
 
+    <!-- Hero Alanı -->
     <section class="hero">
         <h1>Profesyonel Mobilya Montaj ve İmalat</h1>
         <p>Ev ve ofis mobilyalarınız için kusursuz kurulum, özel ölçü dolap çözümleri ve güvenilir usta desteği.</p>
         <a href="https://wa.me/905000000000" class="btn" target="_blank">Hemen Fiyat Alın</a>
     </section>
 
+    <!-- Hizmetler -->
     <section id="hizmetler">
         <div class="container">
             <h2>Hizmetlerimiz</h2>
@@ -284,15 +413,19 @@
         </div>
     </section>
 
+    <!-- Hakkımızda (Ortalanmış) -->
     <section id="hakkimizda">
-        <div class="container" style="max-width: 800px; text-align: center;">
+        <div class="container">
             <h2>Hakkımızda</h2>
-            <p style="margin-top: 1rem; color: #475569;">
-                Çamlık Mobilya Montaj olarak yılların getirdiği tecrübe ile evinizin ve iş yerinizin mobilya kurulum, imalat ve montaj ihtiyaçlarında güvenilir adresiniziz. Müşteri memnuniyetini ön planda tutarak, her işi kendi evimiz gibi özenle yapıyoruz.
-            </p>
+            <div class="about-content">
+                <p>
+                    Çamlık Mobilya Montaj olarak yılların getirdiği tecrübe ile evinizin ve iş yerinizin mobilya kurulum, imalat ve montaj ihtiyaçlarında güvenilir adresiniziz. Müşteri memnuniyetini ön planda tutarak, her işi kendi evimiz gibi büyük bir titizlik ve özenle gerçekleştiriyoruz.
+                </p>
+            </div>
         </div>
     </section>
 
+    <!-- Galeri Bölümü -->
     <section id="galeri" class="gallery">
         <div class="container">
             <h2>Yaptığımız İşlerden Kareler</h2>
@@ -351,30 +484,111 @@
         </div>
     </section>
 
-    <section id="yorumlar">
+    <!-- Fiyat Hesaplama Aracı -->
+    <section id="hesapla">
         <div class="container">
-            <h2>Müşteri Yorumları ve Puanlar</h2>
-            <p class="section-desc">Bizi tercih eden müşterilerimizin memnuniyeti</p>
-            <div class="reviews-grid">
-                <div class="review-card">
-                    <p>"Mutfak dolabımızın montajı kusursuz yapıldı. Temiz ve titiz çalıştılar, çok memnun kaldık."</p>
-                    <h4>Ahmet Y.</h4>
+            <h2>Hızlı Fiyat Hesaplama</h2>
+            <p class="section-desc">Montaj veya imalat hizmetimiz için yaklaşık maliyet hesaplayın</p>
+            <div class="calculator-box">
+                <div class="calc-group">
+                    <label for="hizmet-tipi">Hizmet Türü Seçin:</label>
+                    <select id="hizmet-tipi" onchange="hesaplaFiyat()">
+                        <option value="1000">Mutfak Dolabı Montajı</option>
+                        <option value="1200">Ray Dolap / Gardırop</option>
+                        <option value="800">Vestiyer / Portmanto</option>
+                        <option value="600">TV Ünitesi / Raf Kurulumu</option>
+                    </select>
                 </div>
-                <div class="review-card">
-                    <p>"Antre için yaptığımız vestiyer tam istediğimiz ölçüde ve harika oldu. Kesinlikle tavsiye ederim."</p>
-                    <h4>Mehmet K.</h4>
+                <div class="calc-group">
+                    <label for="boyut">Ölçü / Boyut (Metretül veya Modül Sayısı):</label>
+                    <input type="number" id="boyut" value="3" min="1" max="20" oninput="hesaplaFiyat()">
+                </div>
+                <div class="calc-result" id="sonuc-text">
+                    Tahmini Tutar: 3.000 TL
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Müşteri Yorumları ve Puanlama -->
+    <section id="yorumlar">
+        <div class="container">
+            <h2>Müşteri Yorumları ve Puanlar</h2>
+            <p class="section-desc">Bizi tercih eden müşterilerimizin memnuniyeti</p>
+            
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Mutfak dolabımızın montajı kusursuz yapıldı. Temiz ve titiz çalıştılar, çok memnun kaldık."</p>
+                    <h4>Ahmet Y.</h4>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Antre için yaptığımız vestiyer tam istediğimiz ölçüde ve harika oldu. Kesinlikle tavsiye ederim."</p>
+                    <h4>Mehmet K.</h4>
+                </div>
+            </div>
+
+            <!-- Yorum Ekleme Alanı -->
+            <div class="add-review-box">
+                <h3>Deneyiminizi Puanlayın & Yorum Yazın</h3>
+                <form onsubmit="yorumGonder(event)">
+                    <div class="calc-group">
+                        <label for="yorum-isim">Adınız Soyadınız:</label>
+                        <input type="text" id="yorum-isim" required placeholder="Adınız">
+                    </div>
+                    <div class="calc-group">
+                        <label for="yorum-puan">Puanınız:</label>
+                        <select id="yorum-puan">
+                            <option value="★★★★★">5 Yıldız (Mükemmel)</option>
+                            <option value="★★★★☆">4 Yıldız (İyi)</option>
+                            <option value="★★★☆☆">3 Yıldız (Orta)</option>
+                        </select>
+                    </div>
+                    <div class="calc-group">
+                        <label for="yorum-metin">Yorumunuz:</label>
+                        <input type="text" id="yorum-metin" required placeholder="Hizmet hakkındaki düşünceleriniz...">
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%; cursor: pointer; border: none;">Yorumu Gönder</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Sabit Buton -->
     <a href="https://wa.me/905000000000" class="whatsapp-float" target="_blank">
         WhatsApp ile Ulaşın
     </a>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2026 Çamlık Mobilya Montaj. Tüm hakları saklıdır.</p>
     </footer>
 
+    <!-- JavaScript Fonksiyonları (Üç Çizgi Menü, Fiyat Hesaplama ve Yorum Ekleme) -->
+    <script>
+        // Mobil Üç Çizgi Menü Aç/Kapat
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        mobileMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Fiyat Hesaplama Mantığı
+        function hesaplaFiyat() {
+            const birimFiyat = parseInt(document.getElementById('hizmet-tipi').value);
+            const miktar = parseInt(document.getElementById('boyut').value) || 1;
+            const toplam = birimFiyat * miktar;
+            document.getElementById('sonuc-text').innerText = "Tahmini Tutar: " + toplam.toLocaleString('tr-TR') + " TL";
+        }
+
+        // Yorum Gönderme Simülasyonu
+        function yorumGonder(e) {
+            e.preventDefault();
+            alert("Yorumunuz başarıyla alındı! Teşekkür ederiz.");
+            e.target.reset();
+        }
+    </script>
 </body>
 </html>
