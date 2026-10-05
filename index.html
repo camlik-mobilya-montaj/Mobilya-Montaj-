@@ -28,7 +28,6 @@
             line-height: 1.6;
         }
 
-        /* Header ve Navigasyon */
         header {
             background-color: var(--primary);
             color: var(--white);
@@ -70,7 +69,6 @@
             color: var(--accent);
         }
 
-        /* Üç Çizgi Mobil Menü Butonu */
         .menu-toggle {
             display: none;
             flex-direction: column;
@@ -85,9 +83,8 @@
             border-radius: 3px;
         }
 
-        /* Hero Alanı (Şeffaf Usta Görseli Arka Planı ile) */
         .hero {
-            background: linear-gradient(rgba(30, 41, 59, 0.82), rgba(30, 41, 59, 0.82)), url('hero-bg.jpg') center/cover;
+            background: linear-gradient(rgba(30, 41, 59, 0.85), rgba(30, 41, 59, 0.85)), url('hero-bg.jpg') center/cover;
             color: var(--white);
             text-align: center;
             padding: 6rem 1rem;
@@ -146,10 +143,9 @@
             margin-bottom: 3rem;
         }
 
-        /* Hizmetler Grid */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 2rem;
         }
 
@@ -169,9 +165,9 @@
         .service-card h3 {
             margin-bottom: 1rem;
             color: var(--primary);
+            font-size: 1.2rem;
         }
 
-        /* Hakkımızda Bölümü (Ortalanmış ve Düzgün Hizalanmış) */
         .about-content {
             max-width: 800px;
             margin: 0 auto;
@@ -185,7 +181,6 @@
             line-height: 1.8;
         }
 
-        /* Galeri Grid (Fotoğrafların Tam ve Düzgün Görünmesi İçin) */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -221,7 +216,6 @@
             padding: 0 1rem;
         }
 
-        /* Fiyat Hesaplama Aracı Bölümü */
         .calculator-box {
             background: var(--white);
             max-width: 600px;
@@ -261,7 +255,6 @@
             margin-top: 1.5rem;
         }
 
-        /* Yorumlar ve Puanlama Bölümü */
         .reviews-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -288,7 +281,6 @@
             font-size: 0.95rem;
         }
 
-        /* Yorum Ekleme Formu */
         .add-review-box {
             background: var(--white);
             max-width: 600px;
@@ -304,7 +296,6 @@
             text-align: center;
         }
 
-        /* WhatsApp Sabit Buton */
         .whatsapp-float {
             position: fixed;
             bottom: 20px;
@@ -335,7 +326,6 @@
             margin-top: 2rem;
         }
 
-        /* Mobil Uyum & Üç Çizgi Menü Aktifleştirme */
         @media(max-width: 768px) {
             nav {
                 display: none;
@@ -366,7 +356,6 @@
 </head>
 <body>
 
-    <!-- Header / Navigasyon ve Üç Çizgi Menü -->
     <header>
         <a href="#" class="logo">Çamlık<span>Mobilya</span></a>
         <div class="menu-toggle" id="mobile-menu">
@@ -384,48 +373,48 @@
         </nav>
     </header>
 
-    <!-- Hero Alanı -->
     <section class="hero">
-        <h1>Profesyonel Mobilya Montaj ve İmalat</h1>
-        <p>Ev ve ofis mobilyalarınız için kusursuz kurulum, özel ölçü dolap çözümleri ve güvenilir usta desteği.</p>
-        <a href="https://wa.me/905000000000" class="btn" target="_blank">Hemen Fiyat Alın</a>
+        <h1>Çamlık Mobilya Montaj</h1>
+        <p>Özel ölçü mutfak, vestiyer, kütüphane ve tüm marka demonte mobilya montajları.</p>
+        <a href="#hesapla" class="btn">Anında Fiyat Hesapla</a>
     </section>
 
-    <!-- Hizmetler -->
     <section id="hizmetler">
         <div class="container">
             <h2>Hizmetlerimiz</h2>
             <p class="section-desc">İhtiyacınıza özel profesyonel çözümler sunuyoruz.</p>
             <div class="services-grid">
                 <div class="service-card">
-                    <h3>Mutfak Dolabı Montajı</h3>
-                    <p>Modüler mutfak kurulumu, tezgah montajı ve ankastre yerleşimi titizlikle yapılır.</p>
+                    <h3>Yatak Odası & Gardırop</h3>
+                    <p>Sürgülü dolap, baza, karyola, vestiyer ve portmanto kurulumu.</p>
                 </div>
                 <div class="service-card">
-                    <h3>Ray Dolap & Gardırop</h3>
-                    <p>Yatak odası ve antreleriniz için özel ölçü sürgülü ve kapaklı gardırop sistemleri.</p>
+                    <h3>Mutfak & Banyo</h3>
+                    <p>Özel ölçü mutfak dolabı, tezgah üstü montajı ve banyo dolapları.</p>
                 </div>
                 <div class="service-card">
-                    <h3>Özel Mobilya & Raf</h3>
-                    <p>Duvara gömme kütüphaneler, vestiyerler, TV üniteleri ve özel ahşap tasarımlar.</p>
+                    <h3>Özel Ölçü Mobilya</h3>
+                    <p>Kitaplık, TV ünitesi, ray dolap ve özel tasarım ahşap işleri.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Marka Montajları</h3>
+                    <p>İKEA, Vivense, Koçtaş ve tüm demonte mobilyalarınız usta ellerde.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Hakkımızda (Ortalanmış) -->
     <section id="hakkimizda">
         <div class="container">
             <h2>Hakkımızda</h2>
             <div class="about-content">
                 <p>
-                    Çamlık Mobilya Montaj olarak yılların getirdiği tecrübe ile evinizin ve iş yerinizin mobilya kurulum, imalat ve montaj ihtiyaçlarında güvenilir adresiniziz. Müşteri memnuniyetini ön planda tutarak, her işi kendi evimiz gibi büyük bir titizlik ve özenle gerçekleştiriyoruz.
+                    Çamlık Mobilya Montaj olarak yılların verdiği tecrübe ile özel ölçü mutfak, vestiyer, kütüphane imalatı ve tüm marka hazır mobilyalarınızın kurulumunu titizlikle gerçekleştiriyoruz. Müşteri memnuniyetini ve kusursuz işçiliği her zaman ön planda tutuyoruz.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Galeri Bölümü -->
     <section id="galeri" class="gallery">
         <div class="container">
             <h2>Yaptığımız İşlerden Kareler</h2>
@@ -433,39 +422,39 @@
             <div class="gallery-grid">
                 
                 <div class="gallery-item">
-                    <img src="image_9.png" alt="Sürgülü Gardırop">
-                    <h3>Sürgülü Kapaklı Gardırop</h3>
-                    <p>Ayna detaylı modern ray dolap sistemi</p>
+                    <img src="image_9.png" alt="Antre Vestiyer">
+                    <h3>Özel Tasarım Antre & Vestiyer</h3>
+                    <p>Ayna, portmanto ve özel dolap detaylar</p>
                 </div>
 
                 <div class="gallery-item">
-                    <img src="image_10.png" alt="Modern Mutfak">
+                    <img src="image_10.png" alt="Mutfak Dolabı">
                     <h3>Modern Mutfak Kurulumu</h3>
                     <p>Parlak beyaz kapaklar ve detay işçilik</p>
                 </div>
 
                 <div class="gallery-item">
-                    <img src="image_11.png" alt="Mutfak Dolabı">
+                    <img src="image_11.png" alt="Mutfak Montajı">
                     <h3>Özel Ölçü Mutfak Dolabı</h3>
                     <p>Kusursuz montaj ve uyum</p>
                 </div>
 
                 <div class="gallery-item">
-                    <img src="image_12.png" alt="Ahşap Tezgah">
+                    <img src="image_12.png" alt="Ahşap Tezgah Mutfak">
                     <h3>Ahşap Tezgah & Mutfak</h3>
                     <p>Detaylı ankastre ve dolap montajı</p>
                 </div>
 
                 <div class="gallery-item">
-                    <img src="image_13.png" alt="Antre & Gardırop">
+                    <img src="image_13.png" alt="Antre Gardırop">
                     <h3>Koyu Gri Antre & Gardırop</h3>
                     <p>Şık aydınlatmalı gömme dolap</p>
                 </div>
 
                 <div class="gallery-item">
-                    <img src="image_14.png" alt="Vestiyer">
-                    <h3>Antre Vestiyer & Portmanto</h3>
-                    <p>Özel ölçü raf ve kapaklı dolap sistemi</p>
+                    <img src="image_14.png" alt="Özel Kütüphane">
+                    <h3>Duvara Gömme Kütüphane</h3>
+                    <p>Özel raf ve dolap sistemleri</p>
                 </div>
 
                 <div class="gallery-item">
@@ -484,33 +473,36 @@
         </div>
     </section>
 
-    <!-- Fiyat Hesaplama Aracı -->
     <section id="hesapla">
         <div class="container">
-            <h2>Hızlı Fiyat Hesaplama</h2>
+            <h2>Tahmini Fiyat Hesaplayıcı</h2>
             <p class="section-desc">Montaj veya imalat hizmetimiz için yaklaşık maliyet hesaplayın</p>
             <div class="calculator-box">
                 <div class="calc-group">
-                    <label for="hizmet-tipi">Hizmet Türü Seçin:</label>
+                    <label for="hizmet-tipi">Mobilya Türü:</label>
                     <select id="hizmet-tipi" onchange="hesaplaFiyat()">
+                        <option value="" disabled selected>Lütfen Seçin</option>
                         <option value="1000">Mutfak Dolabı Montajı</option>
                         <option value="1200">Ray Dolap / Gardırop</option>
                         <option value="800">Vestiyer / Portmanto</option>
-                        <option value="600">TV Ünitesi / Raf Kurulumu</option>
+                        <option value="600">TV Ünitesi / Kütüphane</option>
                     </select>
                 </div>
                 <div class="calc-group">
-                    <label for="boyut">Ölçü / Boyut (Metretül veya Modül Sayısı):</label>
-                    <input type="number" id="boyut" value="3" min="1" max="20" oninput="hesaplaFiyat()">
+                    <label for="ek-hizmet">Ek Hizmetler:</label>
+                    <select id="ek-hizmet" onchange="hesaplaFiyat()">
+                        <option value="0">Yok</option>
+                        <option value="300">Söküm & Nakliye Destek</option>
+                        <option value="500">Özel LED Aydınlatma</option>
+                    </select>
                 </div>
                 <div class="calc-result" id="sonuc-text">
-                    Tahmini Tutar: 3.000 TL
+                    Tahmini Montaj Tutarı: 0 TL
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Müşteri Yorumları ve Puanlama -->
     <section id="yorumlar">
         <div class="container">
             <h2>Müşteri Yorumları ve Puanlar</h2>
@@ -519,35 +511,34 @@
             <div class="reviews-grid">
                 <div class="review-card">
                     <div class="stars">★★★★★</div>
-                    <p>"Mutfak dolabımızın montajı kusursuz yapıldı. Temiz ve titiz çalıştılar, çok memnun kaldık."</p>
-                    <h4>Ahmet Y.</h4>
+                    <p>"Antre vestiyerimizi ve mutfak dolabımızı yaptılar. İşçilikleri o kadar temiz ve titiz ki, kesinlikle gözünüz kapalı güvenebilirsiniz."</p>
+                    <h4>- Ahmet Y.</h4>
                 </div>
                 <div class="review-card">
                     <div class="stars">★★★★★</div>
-                    <p>"Antre için yaptığımız vestiyer tam istediğimiz ölçüde ve harika oldu. Kesinlikle tavsiye ederim."</p>
-                    <h4>Mehmet K.</h4>
+                    <p>"İKEA ve Vivense'den aldığımız tüm demonte mobilyaları kısa sürede kurdular. Çok kibar ve profesyonel ustalarsınız, ellerinize sağlık."</p>
+                    <h4>- Zeynep K.</h4>
                 </div>
             </div>
 
-            <!-- Yorum Ekleme Alanı -->
             <div class="add-review-box">
-                <h3>Deneyiminizi Puanlayın & Yorum Yazın</h3>
+                <h3>Siz De Deneyiminizi Paylaşın</h3>
                 <form onsubmit="yorumGonder(event)">
                     <div class="calc-group">
                         <label for="yorum-isim">Adınız Soyadınız:</label>
-                        <input type="text" id="yorum-isim" required placeholder="Adınız">
+                        <input type="text" id="yorum-isim" required placeholder="Örn: Mehmet Demir">
                     </div>
                     <div class="calc-group">
                         <label for="yorum-puan">Puanınız:</label>
                         <select id="yorum-puan">
-                            <option value="★★★★★">5 Yıldız (Mükemmel)</option>
-                            <option value="★★★★☆">4 Yıldız (İyi)</option>
-                            <option value="★★★☆☆">3 Yıldız (Orta)</option>
+                            <option value="★★★★★">5 Yıldız - Mükemmel</option>
+                            <option value="★★★★☆">4 Yıldız - İyi</option>
+                            <option value="★★★☆☆">3 Yıldız - Orta</option>
                         </select>
                     </div>
                     <div class="calc-group">
                         <label for="yorum-metin">Yorumunuz:</label>
-                        <input type="text" id="yorum-metin" required placeholder="Hizmet hakkındaki düşünceleriniz...">
+                        <input type="text" id="yorum-metin" required placeholder="Hizmetimiz hakkında düşünceleriniz...">
                     </div>
                     <button type="submit" class="btn" style="width: 100%; cursor: pointer; border: none;">Yorumu Gönder</button>
                 </form>
@@ -555,19 +546,15 @@
         </div>
     </section>
 
-    <!-- WhatsApp Sabit Buton -->
     <a href="https://wa.me/905000000000" class="whatsapp-float" target="_blank">
         WhatsApp ile Ulaşın
     </a>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Çamlık Mobilya Montaj. Tüm hakları saklıdır.</p>
+        <p>&copy; 2026 Çamlık Mobilya Montaj - Tüm Hakları Saklıdır.</p>
     </footer>
 
-    <!-- JavaScript Fonksiyonları (Üç Çizgi Menü, Fiyat Hesaplama ve Yorum Ekleme) -->
     <script>
-        // Mobil Üç Çizgi Menü Aç/Kapat
         const mobileMenu = document.getElementById('mobile-menu');
         const navMenu = document.getElementById('nav-menu');
 
@@ -575,15 +562,13 @@
             navMenu.classList.toggle('active');
         });
 
-        // Fiyat Hesaplama Mantığı
         function hesaplaFiyat() {
-            const birimFiyat = parseInt(document.getElementById('hizmet-tipi').value);
-            const miktar = parseInt(document.getElementById('boyut').value) || 1;
-            const toplam = birimFiyat * miktar;
-            document.getElementById('sonuc-text').innerText = "Tahmini Tutar: " + toplam.toLocaleString('tr-TR') + " TL";
+            const mobilyaTuru = parseInt(document.getElementById('hizmet-tipi').value) || 0;
+            const ekHizmet = parseInt(document.getElementById('ek-hizmet').value) || 0;
+            const toplam = mobilyaTuru + ekHizmet;
+            document.getElementById('sonuc-text').innerText = "Tahmini Montaj Tutarı: " + toplam.toLocaleString('tr-TR') + " TL";
         }
 
-        // Yorum Gönderme Simülasyonu
         function yorumGonder(e) {
             e.preventDefault();
             alert("Yorumunuz başarıyla alındı! Teşekkür ederiz.");
