@@ -83,8 +83,588 @@
             border-radius: 3px;
         }
 
+        /* Arka planında hafif şeffaf usta görseli olan Hero Alanı */
         .hero {
-            background: linear-gradient(rgba(30, 41, 59, 0.85), rgba(30, 41, 59, 0.85)), url('hero-bg.jpg') center/cover;
+            background: linear-gradient(rgba(30, 41, 59, 0.82), rgba(30, 41, 59, 0.82)), url('image_10.png') center/cover;
+            color: var(--white);
+            text-align: center;
+            padding: 6rem 1rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .btn {
+            background-color: var(--accent);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #ea580c;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        section {
+            padding: 3rem 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        .section-desc {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 3rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            margin-top: 1rem;
+            color: #475569;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .gallery-item {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+            padding-bottom: 1rem;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            background-color: #f1f5f9;
+            border-bottom: 3px solid var(--accent);
+        }
+
+        .gallery-item h3 {
+            margin: 1rem 0 0.5rem 0;
+            font-size: 1.2rem;
+            color: var(--primary);
+        }
+
+        .gallery-item p {
+            color: #64748b;
+            font-size: 0.9rem;
+            padding: 0 1rem;
+        }
+
+        .calculator-box {
+            background: var(--white);
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .calc-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .calc-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .calc-group select, .calc-group input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .calc-result {
+            background: var(--bg-light);
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--accent);
+            margin-top: 1.5rem;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .review-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .review-card .stars {
+            color: #f59e0b;
+            margin-bottom: 0.5rem;
+        }
+
+        .review-card h4 {
+            margin-top: 1rem;
+            color: var(--primary);
+            text-align: right;
+            font-size: 0.95rem;
+        }
+
+        .add-review-box {
+            background: var(--white);
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .add-review-box h3 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+            text-align: center;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--light-green);
+            color: var(--white);
+            padding: 12px 20px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            z-index: 1001;
+            transition: background 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #1ebe5d;
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        @media(max-width: 768px) {
+            nav {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary);
+                padding: 1.5rem;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                text-align: center;
+            }
+            nav.active {
+                display: flex;
+            }
+            nav a {
+                margin: 0.5rem 0;
+            }
+            .menu-toggle {
+                display: flex;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">Çamlık<span>Mobilya</span></a>
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="nav-menu">
+            <a href="#hizmetler">Hizmetler</a>
+            <a href="#hakkimizda">Hakkımızda</a>
+            <a href="#galeri">Galeri</a>
+            <a href="#hesapla">Fiyat Hesapla</a>
+            <a href="#yorumlar">Yorumlar</a>
+            <a href="admin/index.html" style="color: var(--accent); font-weight: bold;">Yönetim Paneli</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Çamlık Mobilya Montaj</h1>
+        <p>Özel ölçü mutfak, vestiyer, kütüphane ve tüm marka demonte mobilya montajları.</p>
+        <a href="#hesapla" class="btn">Anında Fiyat Hesapla</a>
+    </section>
+
+    <section id="hizmetler">
+        <div class="container">
+            <h2>Hizmetlerimiz</h2>
+            <p class="section-desc">İhtiyacınıza özel profesyonel çözümler sunuyoruz.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Yatak Odası & Gardırop</h3>
+                    <p>Sürgülü dolap, baza, karyola, vestiyer ve portmanto kurulumu.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Mutfak & Banyo</h3>
+                    <p>Özel ölçü mutfak dolabı, tezgah üstü montajı ve banyo dolapları.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Özel Ölçü Mobilya</h3>
+                    <p>Kitaplık, TV ünitesi, ray dolap ve özel tasarım ahşap işleri.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Marka Montajları</h3>
+                    <p>İKEA, Vivense, Koçtaş ve tüm demonte mobilyalarınız usta ellerde.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hakkimizda">
+        <div class="container">
+            <h2>Hakkımızda</h2>
+            <div class="about-content">
+                <p>
+                    Çamlık Mobilya Montaj olarak yılların verdiği tecrübe ile özel ölçü mutfak, vestiyer, kütüphane imalatı ve tüm marka hazır mobilyalarınızın kurulumunu titizlikle gerçekleştiriyoruz. Müşteri memnuniyetini ve kusursuz işçiliği her zaman ön planda tutuyoruz.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeri" class="gallery">
+        <div class="container">
+            <h2>Yaptığımız İşlerden Kareler</h2>
+            <p class="section-desc">Gerçek montaj ve imalat projelerimizden bazıları.</p>
+            <div class="gallery-grid">
+                
+                <div class="gallery-item">
+                    <img src="image_9.png" alt="Antre Vestiyer">
+                    <h3>Özel Tasarım Antre & Vestiyer</h3>
+                    <p>Ayna, portmanto ve özel dolap detaylar</p>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="image_10.png" alt="Mutfak Dolabı">
+                    <h3>Modern Mutfak Kurulumu</h3>
+                    <p>Parlak beyaz kapaklar ve detay işçilik</p>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="image_11.png" alt="Mutfak Montajı">
+                    <h3>Özel Ölçü Mutfak Dolabı</h3>
+                    <p>Kusursuz montaj ve uyum</p>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="image_12.png" alt="Ahşap Tezgah Mutfak">
+                    <h3>Ahşap Tezgah & Mutfak</h3>
+                    <p>Detaylı ankastre ve dolap montajı</p>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="image_13.png" alt="Antre Gardırop">
+                    <h3>Koyu Gri Antre & Gardırop</h3>
+                    <p>Şık aydınlatmalı gömme dolap</p>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="image_14.png" alt="Özel Kütüphane">
+                    <h3>Duvara Gömme Kütüphane</h3>
+                    <p>Özel raf ve dolap sistemleri</p>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="image_15.png" alt="Proje 7">
+                    <h3>Özel İmalat Mobilya</h3>
+                    <p>Titiz işçilik ve kaliteli montaj</p>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="image_16.png" alt="Proje 8">
+                    <h3>Özel Tasarım Dolap</h3>
+                    <p>Yaşam alanınıza değer katıyoruz</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="hesapla">
+        <div class="container">
+            <h2>Tahmini Fiyat Hesaplayıcı</h2>
+            <p class="section-desc">Montaj veya imalat hizmetimiz için yaklaşık maliyet hesaplayın</p>
+            <div class="calculator-box">
+                <div class="calc-group">
+                    <label for="hizmet-tipi">Mobilya Türü:</label>
+                    <select id="hizmet-tipi" onchange="hesaplaFiyat()">
+                        <option value="" disabled selected>Lütfen Seçin</option>
+                        <option value="1000">Mutfak Dolabı Montajı</option>
+                        <option value="1200">Ray Dolap / Gardırop</option>
+                        <option value="800">Vestiyer / Portmanto</option>
+                        <option value="600">TV Ünitesi / Kütüphane</option>
+                    </select>
+                </div>
+                <div class="calc-group">
+                    <label for="ek-hizmet">Ek Hizmetler:</label>
+                    <select id="ek-hizmet" onchange="hesaplaFiyat()">
+                        <option value="0">Yok</option>
+                        <option value="300">Söküm & Nakliye Destek</option>
+                        <option value="500">Özel LED Aydınlatma</option>
+                    </select>
+                </div>
+                <div class="calc-result" id="sonuc-text">
+                    Tahmini Montaj Tutarı: 0 TL
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="yorumlar">
+        <div class="container">
+            <h2>Müşteri Yorumları ve Puanlar</h2>
+            <p class="section-desc">Bizi tercih eden müşterilerimizin memnuniyeti</p>
+            
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Antre vestiyerimizi ve mutfak dolabımızı yaptılar. İşçilikleri o kadar temiz ve titiz ki, kesinlikle gözünüz kapalı güvenebilirsiniz."</p>
+                    <h4>- Ahmet Y.</h4>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"İKEA ve Vivense'den aldığımız tüm demonte mobilyaları kısa sürede kurdular. Çok kibar ve profesyonel ustalarsınız, ellerinize sağlık."</p>
+                    <h4>- Zeynep K.</h4>
+                </div>
+            </div>
+
+            <div class="add-review-box">
+                <h3>Siz De Deneyiminizi Paylaşın</h3>
+                <form onsubmit="yorumGonder(event)">
+                    <div class="calc-group">
+                        <label for="yorum-isim">Adınız Soyadınız:</label>
+                        <input type="text" id="yorum-isim" required placeholder="Örn: Mehmet Demir">
+                    </div>
+                    <div class="calc-group">
+                        <label for="yorum-puan">Puanınız:</label>
+                        <select id="yorum-puan">
+                            <option value="★★★★★">5 Yıldız - Mükemmel</option>
+                            <option value="★★★★☆">4 Yıldız - İyi</option>
+                            <option value="★★★☆☆">3 Yıldız - Orta</option>
+                        </select>
+                    </div>
+                    <div class="calc-group">
+                        <label for="yorum-metin">Yorumunuz:</label>
+                        <input type="text" id="yorum-metin" required placeholder="Hizmetimiz hakkında düşünceleriniz...">
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%; cursor: pointer; border: none;">Yorumu Gönder</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/905000000000" class="whatsapp-float" target="_blank">
+        WhatsApp ile Ulaşın
+    </a>
+
+    <footer>
+        <p>&copy; 2026 Çamlık Mobilya Montaj - Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        mobileMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        function hesaplaFiyat() {
+            const mobilyaTuru = parseInt(document.getElementById('hizmet-tipi').value) || 0;
+            const ekHizmet = parseInt(document.getElementById('ek-hizmet').value) || 0;
+            const toplam = mobilyaTuru + ekHizmet;
+            document.getElementById('sonuc-text').innerText = "Tahmini Montaj Tutarı: " + toplam.toLocaleString('tr-TR') + " TL";
+        }
+
+        function yorumGonder(e) {
+            e.preventDefault();
+            alert("Yorumunuz başarıyla alındı! Teşekkür ederiz.");
+            e.target.reset();
+        }
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta name="google-site-verification" content="RyuxFEG65y2A3UpfkDwQ6yqqW4N4Qe5lmmqxMDLva4" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çamlık Mobilya Montaj | Hızlı ve Güvenilir Usta</title>
+    <style>
+        :root {
+            --primary: #1e293b;
+            --accent: #f97316;
+            --bg-light: #f8fafc;
+            --text: #334155;
+            --white: #ffffff;
+            --light-green: #25d366;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--white);
+            border-radius: 3px;
+        }
+
+        /* Arka planında hafif şeffaf usta görseli olan Hero Alanı */
+        .hero {
+            background: linear-gradient(rgba(30, 41, 59, 0.82), rgba(30, 41, 59, 0.82)), url('image_10.png') center/cover;
             color: var(--white);
             text-align: center;
             padding: 6rem 1rem;
